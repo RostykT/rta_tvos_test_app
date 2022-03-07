@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 
 import LoginScreen from './src/screens/LoginScreen';
 import HomeScreen from './src/screens/HomeScreen';
-import Films from './src/components/Films';
+import VideoComponent from './src/components/VideoComponent';
 const App = () => {
   const [loginView, setLoginView] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
@@ -11,7 +11,15 @@ const App = () => {
     setShowVideo(!showVideo);
   };
   return (
-    <>{!loginView ? <LoginScreen setLoginView={setLoginView} /> : <Films />}</>
+    <>
+      {!loginView ? (
+        <LoginScreen setLoginView={setLoginView} />
+      ) : !showVideo ? (
+        <HomeScreen handleTouch={handleTouch} />
+      ) : (
+        <VideoComponent handleTouch={handleTouch} />
+      )}
+    </>
   );
 };
 
