@@ -7,7 +7,6 @@ import {
 } from 'react-native';
 import React from 'react';
 import Films from '../components/Films';
-// import FlatListDemo from '../componets/FlatList';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const HomeScreen = ({handleTouch}) => {

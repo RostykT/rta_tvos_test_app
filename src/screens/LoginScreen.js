@@ -24,12 +24,10 @@ const LoginScreen = ({setLoginView}) => {
   };
   const handleSubmit = () => {
     if (email === userAdmin.email && password === userAdmin.password) {
-      console.log('sign in successfully');
       setLoginView(true);
       SetError(false);
     } else {
       SetError(true);
-      console.log('Russian warship, go fuck yourself');
     }
   };
   const styles = StyleSheet.create({
